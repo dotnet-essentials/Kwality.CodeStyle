@@ -15,7 +15,7 @@
 
   <!--  Copy the GIT files from the NuGet package. -->
   <Target Name="CopyGitFiles" BeforeTargets="BeforeBuild">
-    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\content\GIT\.gitignore" DestinationFolder="$(ProjectDir)\.Kwality.CodeStyle" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\content\GIT\.gitignore" DestinationFolder="$(ProjectDir)" SkipUnchangedFiles="true" />
   </Target>
 
   <!--  Copy the (Core) PowerShell script(s) from the NuGet package. -->

@@ -6,8 +6,9 @@
 ## Changes to this file may cause incorrect behavior and will be lost when the file is generated again.
 ########################################################################################################################
 
-# Exclude the installed .NET Tools.
-dotnet-tools/
+# The `.Kwality.CodeStyle` folder.
+.Kwality.CodeStyle/
 
-# Exclude the `scripts/` folder.
-scripts/
+# Configuration files (IDE & Roslyn Analyzers).
+.editorconfig
+.globalconfig

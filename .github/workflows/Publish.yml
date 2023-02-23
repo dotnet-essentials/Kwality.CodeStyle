@@ -23,8 +23,11 @@
 # ==                OTHER DEALINGS IN THE SOFTWARE.
 # ======================================================================================================================
 
-# Summary: Release this package on Github package(s).
-name: Publish on Github package(s).
+# Common information for the Github workflow.
+name: Publish on NuGet
+run-name: Publish on NuGet
+
+# Information to determine the conditions under which we want to run this Github workflow.
 on:
   push:
     branches:
@@ -32,8 +35,11 @@ on:
     paths:
       - app/Kwality.CodeStyle/**
 
+# Defines the jobs that are executed when this Github workflow is executed.
 jobs:
-  release:
+
+  # Publish on NuGet.
+  publish:
     name: Package & release on NuGet.
     runs-on: ubuntu-latest
     steps:

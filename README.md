@@ -24,10 +24,7 @@ This will add the following to your `.csproj` file.
 Once the package is installed and your project is built, you'll the following in the folder containing your `*.csproj` file.
 
 - An `.editorconfig` file that's used by JetBrains Rider / ReSharper.  
-  **NOTE:** *This file will NOT be committed to the GIT repository.*
-
 - A `.globalconfig` file. that's used by .NET to configure the Roslyn analyzers.  
-  **NOTE:** *This file will NOT be committed to the GIT repository.*
 
 - A `.Kwality.CodeStyle/` folder which contains PowerShell scripts.  
   **NOTE:** *This file will NOT be committed to the GIT repository.*

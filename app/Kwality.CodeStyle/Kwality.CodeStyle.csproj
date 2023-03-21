@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <NoDefaultExcludes>true</NoDefaultExcludes> <!-- Prevent files and folders starting with a `.` from being excluded. -->
     <Title>Kwality.CodeStyle</Title>
-    <Version>2.0.27-preview2</Version>
+    <Version>2.0.28</Version>
     <Authors>kdeconinck</Authors>
     <Description>IDE Settings, Roslyn Analyzers and PowerShell Scripts.</Description>
     <PackageProjectUrl>https://github.com/dotnet-essentials/Kwality.CodeStyle</PackageProjectUrl>
@@ -14,12 +14,6 @@
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
-  <!-- #################################################################################################################
-       ## Copy the files "Kwality.CodeStyle.props" and "Kwality.CodeStyle.targets" files to the "build" folder in
-       ## the NuGet package.
-       ##
-       ## NOTE: By using this folder, these files are taken into account when a `dotnet build` is executed.
-       ############################################################################################################# -->
   <ItemGroup>
     <!--  Copy the files "Kwality.CodeStyle.props" and "Kwality.CodeStyle.targets" files to the NuGet package.-->
     <None Include="package/build/Kwality.CodeStyle.props" Pack="true" PackagePath="build" />

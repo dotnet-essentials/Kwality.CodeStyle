@@ -23,7 +23,6 @@
   <ItemGroup>
     <!--  Copy the files "Kwality.CodeStyle.props" and "Kwality.CodeStyle.targets" files to the NuGet package.-->
     <None Include="package/build/Kwality.CodeStyle.props" Pack="true" PackagePath="build" />
-    <None Include="package/build/Kwality.CodeStyle.targets" Pack="true" PackagePath="build" />
 
     <!--  Copy the config files to the NuGet package. -->
     <None Include="package/files/.editorconfig" Pack="true" PackagePath="/" />

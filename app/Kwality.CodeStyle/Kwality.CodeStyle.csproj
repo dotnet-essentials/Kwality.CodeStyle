@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <NoDefaultExcludes>true</NoDefaultExcludes> <!-- Prevent files and folders starting with a `.` from being excluded. -->
     <Title>Kwality.CodeStyle</Title>
-    <Version>2.0.28</Version>
+    <Version>2.0.29</Version>
     <Authors>kdeconinck</Authors>
     <Description>IDE Settings, Roslyn Analyzers and PowerShell Scripts.</Description>
     <PackageProjectUrl>https://github.com/dotnet-essentials/Kwality.CodeStyle</PackageProjectUrl>
@@ -19,16 +19,16 @@
     <None Include="package/build/Kwality.CodeStyle.props" Pack="true" PackagePath="build" />
 
     <!--  Copy the config files to the NuGet package. -->
-    <None Include="package/files/.editorconfig" Pack="true" PackagePath="content/config" />
-    <None Include="package/files/.globalconfig" Pack="true" PackagePath="content/config" />
+    <Content Include="package/files/.editorconfig" Pack="true" PackagePath="content/config" />
+    <Content Include="package/files/.globalconfig" Pack="true" PackagePath="content/config" />
 
     <!--  Copy the GIT files to the NuGet package. -->
-    <None Include="package/files/GIT/.gitignore" Pack="true" PackagePath="content/GIT" />
+    <Content Include="package/files/GIT/.gitignore" Pack="true" PackagePath="content/GIT" />
 
     <!--  Copy the PowerShell script(s) to the NuGet package. -->
-    <None Include="package/files/scripts/build.ps1" Pack="true" PackagePath="content/scripts" />
-    <None Include="package/files/scripts/format.ps1" Pack="true" PackagePath="content/scripts" />
-    <None Include="package/files/scripts/mutate.ps1" Pack="true" PackagePath="content/scripts" />
-    <None Include="package/files/scripts/cover.ps1" Pack="true" PackagePath="content/scripts" />
+    <Content Include="package/files/scripts/build.ps1" Pack="true" PackagePath="content/scripts" />
+    <Content Include="package/files/scripts/format.ps1" Pack="true" PackagePath="content/scripts" />
+    <Content Include="package/files/scripts/mutate.ps1" Pack="true" PackagePath="content/scripts" />
+    <Content Include="package/files/scripts/cover.ps1" Pack="true" PackagePath="content/scripts" />
   </ItemGroup>
 </Project>

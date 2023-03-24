@@ -9,6 +9,5 @@
 # The `.Kwality.CodeStyle` folder.
 .Kwality.CodeStyle/
 
-# IDE & Roslyn configuration files.
+# IDE Configuration file.
 .editorconfig
-.globalconfig

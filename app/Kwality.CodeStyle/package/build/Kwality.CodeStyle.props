@@ -15,7 +15,7 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
-  <!-- Instruct MSBuild to use a specific `.globalconfig` file. -->
+  <!-- Instruct MSBuild to use the `.globalconfig` file defined in this package. -->
   <ItemGroup>
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)..\content\config\.globalconfig" />
   </ItemGroup>
@@ -39,27 +39,26 @@
     <PSMutateFile Include="$(MSBuildThisFileDirectory)..\content\scripts\mutate.ps1" />
   </ItemGroup>
 
-  <!-- Copy the `.editorconfig` and the `.globalconfig` file (to the .NET Project) after a clean. -->
+  <!-- Copy the `.editorconfig` file (to the .NET Project) before a build. -->
   <Target Name="CopyConfigFilesToProject" BeforeTargets="BeforeBuild">
-    <Message Text="Copy IDE and Roslyn config files: `$(ProjectName)` to `$(MSBuildProjectDirectory)`." Importance="High" />
+    <Message Text="Copy IDE config file: `$(ProjectName)` to `$(MSBuildProjectDirectory)`." Importance="High" />
     <Copy SourceFiles="@(EditorConfigFile)" DestinationFolder="$(MSBuildProjectDirectory)" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
-    <Copy SourceFiles="@(GlobalConfigFile)" DestinationFolder="$(MSBuildProjectDirectory)" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
   </Target>
 
-  <!-- Copy the `.gitignore` file (to the .NET Project) after a clean. -->
+  <!-- Copy the `.gitignore` file (to the .NET Project) before a build. -->
   <Target Name="CopyGITFilesToProject" BeforeTargets="BeforeBuild">
     <Message Text="Copy GIT config files: `$(ProjectName)` to `$(MSBuildProjectDirectory)`." Importance="High" />
     <Copy SourceFiles="@(GITConfigFile)" DestinationFolder="$(MSBuildProjectDirectory)" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
   </Target>
 
-  <!--  Copy the (Core) PowerShell script(s) (to the .NET Project) after a clean. -->
+  <!--  Copy the (Core) PowerShell script(s) (to the .NET Project) before a build. -->
   <Target Name="CopyCorePowerShellScriptsToProject" BeforeTargets="BeforeBuild">
     <Message Text="Copy PowerShell scripts (Core): `$(ProjectName)` to `$(MSBuildProjectDirectory)`." Importance="High" />
     <Copy SourceFiles="@(PSBuildFile)" DestinationFolder="$(MSBuildProjectDirectory)\.Kwality.CodeStyle\scripts" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
     <Copy SourceFiles="@(PSFormatFile)" DestinationFolder="$(MSBuildProjectDirectory)\.Kwality.CodeStyle\scripts" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
   </Target>
 
-  <!--  Copy the (Test) PowerShell script(s) (to the .NET Project) after a clean. -->
+  <!--  Copy the (Test) PowerShell script(s) (to the .NET Project) before a build. -->
   <Target Name="CopyTestPowerShellScriptsToProject" BeforeTargets="BeforeBuild" Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
     <Message Text="Copy PowerShell scripts (Testing): `$(ProjectName)` to `$(MSBuildProjectDirectory)`." Importance="High" />
     <Copy SourceFiles="@(PSCoverFile)" DestinationFolder="$(MSBuildProjectDirectory)\.Kwality.CodeStyle\scripts" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />

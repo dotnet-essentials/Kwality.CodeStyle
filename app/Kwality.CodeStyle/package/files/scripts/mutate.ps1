@@ -49,7 +49,7 @@ try {
     # Install the .NET Tool `.NET Stryker`.
     Set-Location ".\.Kwality.CodeStyle\dotnet-tools\"
     dotnet new tool-manifest --force
-    dotnet tool install dotnet-stryker --version 3.6.1
+    dotnet tool install dotnet-stryker --version 3.7.1
 
     # Terminate the PowerShell script if the path to the .NET Test Project is NOT found.
     If (-Not $(Test-Path $(Join-Path $cwd $TestProjectFilePath))) {

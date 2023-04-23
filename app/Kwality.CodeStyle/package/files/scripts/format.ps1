@@ -42,7 +42,7 @@ try {
     # Install the .NET Tool `JetBrains.ReSharper.GlobalTools`.
     Set-Location ".\.Kwality.CodeStyle\dotnet-tools\"
     dotnet new tool-manifest --force
-    dotnet tool install JetBrains.ReSharper.GlobalTools --version 2022.3.2
+    dotnet tool install JetBrains.ReSharper.GlobalTools --version 2023.1.0
 
     # Format the .NET Solution.
     dotnet tool run jb cleanupcode --include="**/*.cs" --no-buildin-settings $(Join-Path $cwd $Path -Resolve)

@@ -42,7 +42,7 @@ try {
     # Install the .NET Tool `JetBrains.dotCover.CommandLineTools`.
     Set-Location ".\.Kwality.CodeStyle\dotnet-tools\"
     dotnet new tool-manifest --force
-    dotnet tool install JetBrains.dotCover.GlobalTool --version 2022.3.2
+    dotnet tool install JetBrains.dotCover.GlobalTool --version 2023.1.0
 
     # Calculate the code coverage.
     dotnet clean $(Join-Path $cwd $Path -Resolve)

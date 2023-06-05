@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <NoDefaultExcludes>true</NoDefaultExcludes> <!-- Prevent files and folders starting with a `.` from being excluded. -->
     <Title>Kwality.CodeStyle</Title>
-    <Version>2.0.33</Version>
+    <Version>2.0.34</Version>
     <Authors>kdeconinck</Authors>
     <Description>IDE Settings, Roslyn Analyzers and PowerShell Scripts.</Description>
     <PackageProjectUrl>https://github.com/dotnet-essentials/Kwality.CodeStyle</PackageProjectUrl>

@@ -1279,3 +1279,8 @@ dotnet_naming_rule.private_readonly_field_style.severity = warning
 dotnet_naming_rule.private_field_style.symbols = private_field
 dotnet_naming_rule.private_field_style.style = camel_case_without_prefix
 dotnet_naming_rule.private_field_style.severity = warning
+
+# Configuration for C# files.
+[*.Tests.cs]
+                       # Code Style & Cleanup: (C# Line Breaks).
+csharp_max_line_length = 250
